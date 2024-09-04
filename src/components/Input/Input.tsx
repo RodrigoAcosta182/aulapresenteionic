@@ -1,15 +1,26 @@
 import React from "react";
-import { InputContainer, InputField, InputLabel } from "./LocalStyle";
+import { InputContainer } from "./LocalStyle";
+import { IonInput, IonInputPasswordToggle } from "@ionic/react";
 
 interface InputProps {
   title: string;
+  type?: any;
 }
 
-const Input: React.FC<InputProps> = ({ title }) => {
+const Input: React.FC<InputProps> = ({ title, type = "text" }) => {
   return (
     <InputContainer>
-      <InputField type="text" id="input" placeholder=" " required />
-      <InputLabel htmlFor="input">{title}</InputLabel>
+      <IonInput
+        label={title}
+        labelPlacement="floating"
+        fill="outline"
+        placeholder={title}
+        type={type}
+      >
+        {type === "password" && (
+          <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+        )}
+      </IonInput>
     </InputContainer>
   );
 };

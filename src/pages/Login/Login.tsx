@@ -4,6 +4,7 @@ import {
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
+  IonInput,
 } from "@ionic/react";
 import Layout from "../../components/Layout/Layout";
 import { LoginCardContainer, LoginContainer } from "./LocalStyled";
@@ -20,8 +21,8 @@ const Login: React.FC = () => {
             </IonCardHeader>
             <IonCardContent>
               <LoginCardContainer>
-                <Input title="usuario" />
-                <Input title="contraseña" />
+                <Input title="Usuario" />
+                <Input title="Contraseña" type="password" />
               </LoginCardContainer>
             </IonCardContent>
             <IonCardContent>
