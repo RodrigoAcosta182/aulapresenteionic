@@ -22,14 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children, title }) => {
           </IonToolbar>
         )}
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        {children}
-      </IonContent>
+      <IonContent fullscreen>{children}</IonContent>
     </IonPage>
   );
 };

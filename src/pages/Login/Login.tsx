@@ -28,7 +28,7 @@ const Login: React.FC = () => {
             <IonCardContent>
               <LoginCardContainer>
                 <Input title="Usuario" />
-                <Input title="Contraseña" type="text" />
+                <Input title="Contraseña" type="password" />
               </LoginCardContainer>
             </IonCardContent>
             <IonCardContent>
