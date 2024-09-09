@@ -5,12 +5,18 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonInput,
+  useIonRouter,
 } from "@ionic/react";
 import Layout from "../../components/Layout/Layout";
 import { LoginCardContainer, LoginContainer } from "./LocalStyled";
 import Input from "../../components/Input/Input";
 
 const Login: React.FC = () => {
+  const router = useIonRouter();
+  const onClickIngresar = () => {
+    router.push("/home", "forward", "replace");
+  };
+
   return (
     <Layout
       children={
@@ -22,11 +28,13 @@ const Login: React.FC = () => {
             <IonCardContent>
               <LoginCardContainer>
                 <Input title="Usuario" />
-                <Input title="Contraseña" type="password" />
+                <Input title="Contraseña" type="text" />
               </LoginCardContainer>
             </IonCardContent>
             <IonCardContent>
-              <IonButton expand="block">Ingresar</IonButton>
+              <IonButton onClick={onClickIngresar} expand="block">
+                Ingresar
+              </IonButton>
             </IonCardContent>
           </IonCard>
         </LoginContainer>
